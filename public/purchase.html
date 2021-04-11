@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    </head>
+    <body>
+      <nav x-data="{ open:false }" class="fixed z-10 w-full bg-secondary text-gray-100">
+        <div class="px-2 mt-0 bg-secondary text-white flex justify-between items-center" >
+          <div class="">
+            <div class="dropdown inline-block relative">
+              <a href="#" class="block py-1 text-gray-600 hover:underline">
+                <svg class="stroke-current text-purple inline-block h-full w-12 m-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="8" cy="21" r="2"></circle>
+                  <circle cx="20" cy="21" r="2"></circle>
+                  <path d="M5.67 6H23l-1.68 8.39a2 2 0 0 1-2 1.61H8.75a2 2 0 0 1-2-1.74L5.23 2.74A2 2 0 0 0 3.25 1H1"></path>
+              </svg>
+              </a>    
+          </div>
+            <div class="md:hidden text-2xl" @click="open = true">
+                &equiv;
+            </div>
+        </div>
+        <div x-show="open"  @click.away="open=false">
+            <div class="my-1 mx-2">
+                <input class="form-control" placeholder="buscar" type="search">
+            </div>
+            <div class="py-1 mx-2 md:flex justify-around">
+                <div class="mx-2 flex">
+                    precio:
+                    <div class="ml-2">$</div>
+                    <div class="ml-2 text-primary">$$</div>
+                    <div class="ml-2">$$$</div>
+                    <div class="ml-2">$$$$</div>
+                </div>
+                <div class="mx-2 flex">
+                    <div class="">
+                        Calificacion
+                    </div>
+                    <div class="ml-2 text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&star;</div>
+                </div>
+                <div>
+                    <button class="btn btn-primary">filtrar</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </nav>
+        <main class="pt-20">
+            <div class="flex flex-col items-center">
+                <div>
+                    <label class="text-lg uppercase tracking-wide text-black text-xs font-bold mb-2" for="label">
+                        Checkout
+                      </label>
+                </div>
+                <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="name">
+                      Name*
+                    </label>
+                    <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="nameCustomer" type="text" placeholder="Jonathan">
+
+                  </div>
+                  <div class="md:w-1/2 px-3">
+                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">
+                      Email*
+                    </label>
+                    <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="emailCustomer" type="text" placeholder="email@gmail.com">
+                  </div>
+                  </div>
+            </div>
+
+            <div class="pt-10">
+                <div class="flex flex-col items-center" id="containerCar">
+                    <table class="tborder-collapse lg\:flex-none flex-col md:items-center w-full lg:w-1/2 " id="listPurchase">
+                        <thead>
+                          <tr>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Img</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Name</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Price</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Quantity</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Discount</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Sub Total</th>
+                            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Delete</th>
+                          </tr>
+
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                      <p id="total">Total : 0</p>
+                </div>
+                
+            </div>
+            <div class="flex justify-center m-5 md:flex-nowrap md:justify-center md:justify-items-center p-20">
+                <a href="index.html" class="w-full  btn btn-secondary text-center lg:mr-20 sm:w-1/4">Shoping</a>
+                <a href="#" id="process" class="w-full btn btn-secondary text-center sm:w-1/4">Payment</a>
+            </div>
+           
+        </main>
+        <footer class="bg-secondary w-full  text-white absolute">
+          <div class="md:flex justify-around md:flex-row-reverse sm:flex sm:justify-items-stretch">
+              <div class="mt-4 ml-8">
+                  <div class="hover:text-primary"><i class="fa fa-facebook"></i> facebook</div>
+                  <div class="hover:text-primary"><i class="fa fa-twitter"></i> twitter</div>
+                  <div class="hover:text-primary"><i class="fa fa-instagram"></i> instagram</div>
+      
+              </div>
+              <ul class="mt-4 mb-4 ml-8 md:list-disc">
+                <li>Support</li>
+                <li>About</li>
+              </ul>
+          </div>
+      </footer>
+      
+      <script type="module" src="./js/appPurchase.js"></script>
+    </body>
+    
+</html>
+
+
+            

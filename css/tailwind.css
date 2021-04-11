@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+
+.alert {
+    @apply 
+        p-2 
+        rounded 
+        relative 
+        border-solid 
+        border 
+        m-2;
+  }
+
+.alert-danger {
+      @apply 
+        bg-red-200
+        border-red-700
+        text-red-500
+  }
+
+.alert-success {
+    @apply 
+      bg-green-200
+      border-green-700
+      text-green-500
+}
+
+.alert-info{
+    @apply 
+      bg-blue-200
+      border-blue-700
+      text-blue-500
+}
+
+.alert-warning{
+    @apply 
+      bg-yellow-200
+      border-yellow-700
+      text-yellow-500
+}
+
+.form-control{
+  @apply 
+    w-full
+    leading-snug
+    text-gray-800 
+    py-1 
+    px-4
+    rounded
+    border
+    border-blue-300
+    bg-gray-300
+    
+}
+
+.form-control:hover {
+  @apply
+    bg-white;
+}
+
+.form-control:focus {
+  @apply outline-none;
+}
+
+.btn {
+  @apply rounded  py-1 px-4 bg-gray-500 block;
+}
+
+.btn-primary {
+  @apply bg-yellow-600
+}
+
+.btn:hover {
+  @apply  shadow-none bg-gray-700 text-white
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .alert {
+    @apply 
+        p-2 
+        rounded 
+        relative 
+        border-solid 
+        border 
+        m-2;
+  }
+
+.alert-danger {
+      @apply 
+        bg-red-200
+        border-red-700
+        text-red-500
+  }
+
+.alert-success {
+    @apply 
+      bg-green-200
+      border-green-700
+      text-green-500
+}
+
+.alert-info{
+    @apply 
+      bg-blue-200
+      border-blue-700
+      text-blue-500
+}
+
+.alert-warning{
+    @apply 
+      bg-yellow-200
+      border-yellow-700
+      text-yellow-500
+}
+
+.form-control{
+  @apply 
+    w-full
+    leading-snug
+    text-gray-800 
+    py-1 
+    px-4
+    rounded
+    border
+    border-blue-300
+    bg-gray-300
+    
+}
+
+.form-control:hover {
+  @apply
+    bg-white;
+}
+
+.form-control:focus {
+  @apply outline-none;
+}
+
+.btn {
+  @apply rounded  py-1 px-4 bg-gray-500 block;
+}
+
+.btn-primary {
+  @apply bg-yellow-600
+}
+
+.btn:hover {
+  @apply  shadow-none bg-gray-700 text-white
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+@tailwind utilities;

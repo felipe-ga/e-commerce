@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+      </head>
+    <body>
+      <nav x-data="{ open:false }" class="fixed z-10 w-full bg-secondary text-gray-100">
+        <div class="px-2 mt-0 bg-secondary text-white flex justify-between items-center" >
+          <div class="">
+            <div class="p-0">
+              <div class="dropdown inline-block relative">
+                <a href="#" class="block py-1 text-gray-600 hover:underline">
+                  <svg class="stroke-current text-purple inline-block h-full w-12 m-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="2"></circle>
+                    <circle cx="20" cy="21" r="2"></circle>
+                    <path d="M5.67 6H23l-1.68 8.39a2 2 0 0 1-2 1.61H8.75a2 2 0 0 1-2-1.74L5.23 2.74A2 2 0 0 0 3.25 1H1"></path>
+                </svg>
+                </a>
+                <div class="dropdown-menu absolute hidden bg-gray-300 text-gray-700 pt-1">
+                  <table id="list-car">
+                    <thead>
+                        <tr class="border-1">
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                  <br>
+                  <a href="#" id="remove-all-car" class="btn btn-secondary text-center">Remove all</a>
+                  <br>
+                  <a href="#" id="checkout" class="btn btn-secondary text-center">Checkout</a>
+                </div>
+                
+              </div>
+            
+            </div>
+        </div>
+        <div>
+            <div class="my-1 mx-2">
+                <input class="form-control" placeholder="buscar" type="search">
+            </div>
+            <div class="py-1 mx-2 md:flex justify-around">
+                <div class="mx-2 flex">
+                    precio:
+                    <div class="ml-2">$</div>
+                    <div class="ml-2 text-primary">$$</div>
+                    <div class="ml-2">$$$</div>
+                    <div class="ml-2">$$$$</div>
+                </div>
+                <div class="mx-2 flex">
+                    <div class="">
+                        Calificacion
+                    </div>
+                    <div class="ml-2 text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&starf;</div>
+                    <div class="ml-px text-primary">&star;</div>
+                </div>
+                <div>
+                    <button class="btn btn-primary">filtrar</button>
+                </div>
+            </div>
+        </div>
+        <div class="p-5">
+          <div class="dropdown inline-block relative">
+            
+          </div>
+        </div>
+        
+    </nav>
+        <main class="pt-20" id="render">
+            <div id="list-products" class="cards md:mx-auto sm:mx-auto sm:flex  mt-0 mr-0 ml-0 pt-5 p-20 bg-gray-100 lg:grid lg:grid-cols-3 lg:gap-8 xl:grid xl:grid-cols-3 xl:gap-8 md:grid md:grid-cols-3 md:gap-8 ">
+                
+            </div>
+        </main>
+        <footer class="bg-secondary w-full h-full text-white">
+          <div class="md:flex justify-around md:flex-row-reverse">
+              <div class="mt-4 ml-8">
+                  <div class="hover:text-primary"><i class="fa fa-facebook"></i> Facebook</div>
+                  <div class="hover:text-primary"><i class="fa fa-twitter"></i> Twitter</div>
+                  <div class="hover:text-primary"><i class="fa fa-instagram"></i> nstagram</div>
+      
+              </div>
+              <ul class="mt-4 mb-4 ml-8 md:list-disc">
+                  <li>Support</li>
+                  <li>About</li>
+              </ul>
+          </div>
+      </footer>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script type="module" src="./js/app.js"></script>
+    </body>
+    
+</html>
